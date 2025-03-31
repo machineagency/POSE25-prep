@@ -1,6 +1,13 @@
 ## Setup Standalone Connection
 Use the Jubilee Docs: https://jubilee3d.com/index.php?title=Connecting_to_Jubilee
 
+## For both Mac and Windows
+- After setting up everything below, we can install opencv and matplotlib
+  - `python3 -m pip install opencv_contrib_python` matplotlib
+  - `python3 -m pip install matplotlib`
+  - Can probably throw these in a requirements file but noting it here before I forget
+- We also need to move the correct `deck_config` file onto each machine. Move the `json` file from [the deck_configs folder](./deck-configs/) folder for your machine into the `deck_definition` folder of science jubilee. Again, should probably automate this.
+
 ## Mac
 ### Science Jubilee + Workshop Repo
 Steps to provision Mac laptop:
