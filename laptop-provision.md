@@ -1,4 +1,5 @@
-## Other Software
+## Setup Standalone Connection
+Use the Jubilee Docs: https://jubilee3d.com/index.php?title=Connecting_to_Jubilee
 
 ## Mac
 ### Science Jubilee + Workshop Repo
