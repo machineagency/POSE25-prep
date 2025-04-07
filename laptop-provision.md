@@ -14,7 +14,7 @@ Steps to provision Mac laptop:
 - `mkdir 2025PoseWorkshop`
 - `cd 2025PoseWorkshop`
 - `python3 -m venv .venv`
-- `source .venv/bin activate`
+- `source .venv/bin/activate`
 - `git clone https://github.com/machineagency/science-jubilee.git`
 - `git clone https://github.com/machineagency/POSE25.git`
 - `cd science-jubilee`
