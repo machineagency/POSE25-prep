@@ -52,7 +52,7 @@ Steps to provision Mac laptop:
 - `git clone https://github.com/machineagency/POSE25.git`
 - `sudo apt update`
 - `sudo apt upgrade`
-- `sudo apt install python3.10-env`
+- `sudo apt install python3.10-venv`
   - Assuming the `python3 -V` is 3.10
 - `python3 -m venv .venv`
 - `python3 -m pip install --upgrade pip`
