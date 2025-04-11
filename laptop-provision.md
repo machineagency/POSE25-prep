@@ -55,6 +55,7 @@ Steps to provision Mac laptop:
 - `sudo apt install python3.10-venv`
   - Assuming the `python3 -V` is 3.10
 - `python3 -m venv .venv`
+- `source .venv/bin/activate`
 - `python3 -m pip install --upgrade pip`
 - `python3 -m pip install -e .`
 - `python3 -m pip install jupyterlab`
