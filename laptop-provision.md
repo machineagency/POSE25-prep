@@ -57,7 +57,7 @@ Steps to provision Mac laptop:
 - `python3 -m venv .venv`
 - `source .venv/bin/activate`
 - `python3 -m pip install --upgrade pip`
-- go to the science jubilee folder `cd .. /`
+- go to the science jubilee folder `cd science-jubilee`
 - `python3 -m pip install -e .`
 - `python3 -m pip install jupyterlab`
 - `python3 -m ipykernel install --user --name=POSE25`
