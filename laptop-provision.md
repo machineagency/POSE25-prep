@@ -73,3 +73,34 @@ Steps to provision Mac laptop:
 - Restart VC code
 - Now if you choose 'use jupyter kernel' the `POSE25` kernel will appear
 - if yellow line appears for pylance warning, the quickfix to add src/ to path will fix it
+
+#### Serial device configuration
+WSL runs in a virtualized environment that doesn't have direct access to hardware by default. To use serial devices, we can **forward USB device to WSL**.
+1. Run Windows Powershell as Administrator
+2. # Install usbipd
+   winget install usbipd
+   # list all usb devices
+   usbipd list
+   # if there is any error, download the installer directly from GitHub instead of using winget:
+	Go to: https://github.com/dorssel/usbipd-win/releases
+	Download the latest MSI installer (like usbipd-win_x.x.x.msi)
+	Run the MSI installer as administrator
+	After installation, restart your PowerShell or Command Prompt as Administrator
+   # Bind the USB device (replace BUSID with your device's ID from the list)
+   usbipd bind -b BUSID
+   # Attach to WSL
+   usbipd attach -b BUSID --wsl
+3. In WSL terminal:
+   # Install required packages
+   sudo apt update
+   sudo apt install linux-tools-generic hwdata
+   # Set up usbip
+   sudo update-alternatives --install /usr/local/bin/usbip usbip /usr/lib/linux-tools/*/usbip 20
+   # Check if device appears
+   ls -l /dev/ttyUSB* /dev/ttyACM*
+3. If you see "Permission Denied" on COM Port
+   # in WSL terminal, add your user to the dialout group
+   sudo usermod -a -G dialout $USER
+   sudo usermod -a -G tty $USER
+   # Or, change device permissions directly. Replace 'ttyACM0' with your actual device path
+   sudo chmod 666 /dev/ttyACM0
