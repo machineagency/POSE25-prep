@@ -74,7 +74,7 @@ Steps to provision Mac laptop:
 - Now if you choose 'use jupyter kernel' the `POSE25` kernel will appear
 - if yellow line appears for pylance warning, the quickfix to add src/ to path will fix it
 
-### Serial Device Configuration
+#### Serial Device Configuration
 
 WSL runs in a virtualized environment that doesn't have direct access to hardware by default. To use serial devices with WSL:
 
@@ -129,3 +129,6 @@ WSL runs in a virtualized environment that doesn't have direct access to hardwar
      ```bash
      sudo chmod 666 /dev/ttyACM0  # Replace with your actual device path
      ```
+#### Camera feed via HTTP server
+Download `webcam-server.py` and run it on the command prompt (change to the file directory, then run `python webcam_server.py`).
+Replace `WebCam.py` in science jubilee `tools` folder and `webcam_config.json` in `configs` folder with the downloaded file.
